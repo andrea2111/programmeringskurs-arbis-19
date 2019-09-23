@@ -1,32 +1,24 @@
+def check_answer(guess, answer):
+
+    if guess.lower() == answer.lower():
+        global points
+        
+        points += 1
+        print ("Rätt!")
+    else:
+        print ("Fel!")
+
 points = 0
 
 print('Svara alltid "Ja" eller "Nej"')
 
 svar_1 = input('Är Niinistö Finlands president? ')
-
-if svar_1.lower() == 'ja':
-    points += 1
-elif svar_1.lower() == 'nej':
-    points -= 1
-else:
-    print('Svara alltid "Ja" eller "Nej"')
+check_answer(svar_1, 'ja')
 
 svar_2 = input('Är jorden rund? ')
-
-if svar_2.lower() == 'ja':
-    points += 1
-elif svar_2.lower() == 'nej':
-    points -= 1
-else:
-    print('Svara alltid "Ja" eller "Nej"')
+check_answer(svar_2, 'ja')
 
 svar_3 = input('Är ett dygn 25 timmar? ')
-
-if svar_3.lower() == 'ja':
-    points -= 1
-elif svar_3.lower() == 'nej':
-    points += 1
-else:
-    print('Svara alltid "Ja" eller "Nej"')
+check_answer(svar_3, 'nej') 
 
 print ('Du fick ' + str(points) + ' poäng!')
